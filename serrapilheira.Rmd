@@ -1,0 +1,62 @@
+---
+title: "Invertebrados associado à serrapilheira suspensa"
+author: "Kele R. Firmiano"
+date: "04/03/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Breve histórico
+
+Sou uma ecóloga de comunidades, e durante mais de 10 anos de minha formação acadêmica dediquei-me ao estudo de comunidades aquáticas, mais especificamente, macroinvertebrados bentônicos em riachos. Segui o curso histórico da evolução (se me permitem a analogia) e agora estudo comunidades terrestres, mais especifamente, ecologia plantas. Atualmente integro um grupo de pesquisa cujo principal foco é a modelagem de nicho ecológico. Para maiores informações sobre o grupo de pesquisa, acesse <https://model-r.jbrj.gov.br/about.php>. 
+
+Quando estava no mestrado (lá em 2012), participei do (divertido, sofrido, cansativo, produtivo etc) curso de campo. Juntamente com mais duas amigas (J.C. Braidotti e H.H.S. Vitor) desenvolvi um pequeno projeto de pesquisa com comunidades de invertebrados, mas um ecossistema bem particular: serrapilheira acumulada em copas de *Erythrochiton brasiliensis*. Estes dados não foram bem explorados posteriormente, e assim resolvi revisitá-los, e analisá-los como produto final da disciplina **Projetos de análise de dados usando R**, ofertada pela Escola Nacional de Botânica Tropical e ministrada pelxs professores Andrea Sanchez-Tápia (<https://github.com/AndreaSanchezTapia>), Sara R. Mortara (<https://github.com/saramortara>) e Diogo S. B. Rocha (<https://github.com/diogosbr>). 
+
+
+## Sistema estudado
+
+### *Erythrochiton brasiliensis* (Nees & Mart)
+
+**buscar + info no reflora** 
+
+O sistema estudado localiza-se "Trilha do vinhático" no Parque Estadual do Rio Doce (PERD) no estado de Minas Gerais (<http://www.ief.mg.gov.br/>). Ao longo da trilha observamos várias manchas de *E. brasiliensis*. Observamos em campo que a arquitetura desta planta favorece o acúmulo da serrapilheira provalmente composta por folhas, galhos, flores e frutos das espécies 
+arbóreas acima das manchas (Figura 1). 
+
+![Figura 1. Indivíduos de *E. brasiliensis* com a serrapilheira acumulada entre as folhas. Foto: K.R. Firmiano](docs/e_brasiliensis.JPG)
+
+### Estrutura populacional
+
+Amostramos 110 indivíduos de *E. brasiliensis* para determinar a estrutura populacional de *E. brasiliensis*. Com um fita métrica mensuramos: altura total (cm), altura da copa (cm), e contamos o número de folhas, e de hastes florais, quando presente.
+
+### Coleta da serrapilheira
+
+A serrapilheira acumulada foi coletada pela técnica de batimento e material ainda remanescente foi removido com pincel. Toda a copa
+da planta foi acondicionada dentro de um saco plástico para evitar perda de 
+serrapilheira e fuga dos invertebrados  (Figura 2). 
+
+![Figura 2. Coleta de serrapilheira. Foto: J.C. Braidotti](docs/batimento.JPG)
+
+Em laboratório o material foi 
+peneirado (500μm) e somente a porção retida nesta peneira foi triada. 
+Os organismos foram separados manualmente, fixados em álcool a 70% e 
+identificados em nível de morfoespécies.
+
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
