@@ -20,7 +20,10 @@ Quando estava no mestrado (lá em 2012), participei do (divertido, sofrido, cans
 
 ### *Erythrochiton brasiliensis* (Nees & Mart)
 
-**buscar + info no reflora** 
+*Erythrochiton brasiliensis* é uma espécie de porte arbustivo e hábito terrícola pertencente à família Rutaceae. 
+Suas flores são brancas com corola ampla alva e longo cálice rosado a avermelhado, dispostas no ápice de inflorescências longo-pedunculadas. Apresenta distribuição neotroical, com ocorrência na Venezuela, Guianas e Brasil. É uma espécie nativa não endêmica do Brasil.  No território brasileiro há ocorrências confirmadas os domínios fitogeográficos Amazônia e Mata Atlântica. Na Mata Atlântica *E. brasiliensis* ocorre na região Sudeste nos estados de Espírito Santo, Minas Gerais, Rio de Janeiro. Estas informações foram extraídas do **[Programa REFLORA] NAO DEU CERTO O HIPERLINK**. (<http://reflora.jbrj.gov.br/reflora/listaBrasil/ConsultaPublicaUC/BemVindoConsultaPublicaConsultar.do?invalidatePageControlCounter=1&idsFilhosAlgas=%5B2%5D&idsFilhosFungos=%5B1%2C11%2C10%5D&lingua=&grupo=5&genero=Erythrochiton&especie=brasiliensis&autor=&nomeVernaculo=&nomeCompleto=&formaVida=null&substrato=null&ocorreBrasil=QUALQUER&ocorrencia=OCORRE&endemismo=TODOS&origem=TODOS&regiao=QUALQUER&estado=QUALQUER&ilhaOceanica=32767&domFitogeograficos=QUALQUER&bacia=QUALQUER&vegetacao=TODOS&mostrarAte=SUBESP_VAR&opcoesBusca=TODOS_OS_NOMES&loginUsuario=Visitante&senhaUsuario=&contexto=consulta-publica>) 
+
+
 
 O sistema estudado localiza-se "Trilha do vinhático" no Parque Estadual do Rio Doce (PERD) no estado de Minas Gerais (<http://www.ief.mg.gov.br/>). Ao longo da trilha observamos várias manchas de *E. brasiliensis*. Observamos em campo que a arquitetura desta planta favorece o acúmulo da serrapilheira provalmente composta por folhas, galhos, flores e frutos das espécies 
 arbóreas acima das manchas (Figura 1). 
@@ -35,12 +38,10 @@ Amostramos 110 indivíduos de *E. brasiliensis* para determinar a estrutura popu
 
 A serrapilheira acumulada foi coletada pela técnica de batimento e material ainda remanescente foi removido com pincel. Toda a copa
 da planta foi acondicionada dentro de um saco plástico para evitar perda de 
-serrapilheira e fuga dos invertebrados  (Figura 2). 
-
-![Figura 2. Coleta de serrapilheira. Foto: J.C. Braidotti](docs/batimento.JPG)
+serrapilheira e fuga dos invertebrados. 
 
 Em laboratório o material foi 
-peneirado (500μm) e somente a porção retida nesta peneira foi triada. 
+peneirado (500 μm) e somente a porção retida nesta peneira foi triada. 
 Os organismos foram separados manualmente, fixados em álcool a 70% e 
 identificados em nível de morfoespécies.
 
