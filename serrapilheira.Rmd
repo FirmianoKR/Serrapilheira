@@ -1,5 +1,5 @@
 ---
-title: "Invertebrados associado à serrapilheira suspensa"
+title: "Invertebrados associados à serrapilheira acumulada em *Erythrochiton brasiliensis* (Rutaceae)"
 author: "Kele R. Firmiano"
 date: "04/03/2020"
 output: html_document
@@ -8,42 +8,40 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+### Importância ecológica da serrapilheira
 
-## Breve histórico
+A serrapilheira é composta por detritos de várias origens, sendo nos trópicos principalmente formada por folhas em diferentes estágios de decomposição. Apesar de ser mais abundante no solo, a serrapilheira pode ser acumulada também sobre emaranhados de trepadeiras, epífitas, folhas e ramos de árvores dando uma estrutura tridimensional à matéria orgânica morta. Por ocorrer em diferentes microambientes, a serrapilheira difere em vários aspectos tais como umidade, temperatura, área e volume, o que determinam a presença invertebrados associados ao acúmulo de serrapilheira. A produção de serrapilheira, juntamente com a heterogeneidade da vegetação resultam em alta complexidade espacial. Essa diversidade de condições permite que a serrapilheira abrigue uma comunidade muito diversa, com por diferentes grupos de invertebrados tais como: formigas, opiliones, aranhas, coleópteros, ácaros etc. 
 
-Sou uma ecóloga de comunidades, e durante mais de 10 anos de minha formação acadêmica dediquei-me ao estudo de comunidades aquáticas, mais especificamente, macroinvertebrados bentônicos em riachos. Segui o curso histórico da evolução (se me permitem a analogia) e agora estudo comunidades terrestres, mais especifamente, ecologia plantas. Atualmente integro um grupo de pesquisa cujo principal foco é a modelagem de nicho ecológico. Para maiores informações sobre o grupo de pesquisa, acesse <https://model-r.jbrj.gov.br/about.php>. 
+### E no meio do camiminho, um  reservatório suspenso de serrapilheira!
 
-Quando estava no mestrado (lá em 2012), participei do (divertido, sofrido, cansativo, produtivo etc) curso de campo. Juntamente com mais duas amigas (J.C. Braidotti e H.H.S. Vitor) desenvolvi um pequeno projeto de pesquisa com comunidades de invertebrados, mas um ecossistema bem particular: serrapilheira acumulada em copas de *Erythrochiton brasiliensis*. Estes dados não foram bem explorados posteriormente, e assim resolvi revisitá-los, e analisá-los como produto final da disciplina **Projetos de análise de dados usando R**, ofertada pela Escola Nacional de Botânica Tropical e ministrada pelxs professores Andrea Sanchez-Tápia (<https://github.com/AndreaSanchezTapia>), Sara R. Mortara (<https://github.com/saramortara>) e Diogo S. B. Rocha (<https://github.com/diogosbr>). 
+Quando estava no mestrado (lá em 2012), participei do (divertido, sofrido, cansativo, produtivo etc) curso de campo. Juntamente com mais duas amigas (J.C. Braidotti e H.H.S. Vitor) desenvolvi um pequeno projeto de pesquisa com comunidades de invertebrados em serrapilheira acumulada em copas de *Erythrochiton brasiliensis*.
 
+*Erythrochiton brasiliensis* (Nees & Mart)  é uma espécie de porte arbustivo e hábito terrícola pertencente à família Rutaceae. Suas flores são brancas com corola ampla, alva e longo cálice variando de coloração rosada a avermelhada, dispostas no ápice de inflorescências longo-pedunculadas. *E. brasiliensis* apresenta distribuição neotropical, com ocorrência na Venezuela, Guianas e Brasil. É uma espécie nativa não endêmica do Brasil.  No território brasileiro há ocorrências confirmadas nos domínios fitogeográficos da Amazônia e da Mata Atlântica. Na Mata Atlântica *E. brasiliensis* ocorre na região Sudeste nos estados de Espírito Santo, Minas Gerais, e Rio de Janeiro. Estas informações foram extraídas do *site* Programa REFLORA (<http://reflora.jbrj.gov.br>).  
 
-## Sistema estudado
-
-### *Erythrochiton brasiliensis* (Nees & Mart)
-
-*Erythrochiton brasiliensis* é uma espécie de porte arbustivo e hábito terrícola pertencente à família Rutaceae. 
-Suas flores são brancas com corola ampla alva e longo cálice rosado a avermelhado, dispostas no ápice de inflorescências longo-pedunculadas. Apresenta distribuição neotroical, com ocorrência na Venezuela, Guianas e Brasil. É uma espécie nativa não endêmica do Brasil.  No território brasileiro há ocorrências confirmadas os domínios fitogeográficos Amazônia e Mata Atlântica. Na Mata Atlântica *E. brasiliensis* ocorre na região Sudeste nos estados de Espírito Santo, Minas Gerais, Rio de Janeiro. Estas informações foram extraídas do **[Programa REFLORA] NAO DEU CERTO O HIPERLINK**. (<http://reflora.jbrj.gov.br/reflora/listaBrasil/ConsultaPublicaUC/BemVindoConsultaPublicaConsultar.do?invalidatePageControlCounter=1&idsFilhosAlgas=%5B2%5D&idsFilhosFungos=%5B1%2C11%2C10%5D&lingua=&grupo=5&genero=Erythrochiton&especie=brasiliensis&autor=&nomeVernaculo=&nomeCompleto=&formaVida=null&substrato=null&ocorreBrasil=QUALQUER&ocorrencia=OCORRE&endemismo=TODOS&origem=TODOS&regiao=QUALQUER&estado=QUALQUER&ilhaOceanica=32767&domFitogeograficos=QUALQUER&bacia=QUALQUER&vegetacao=TODOS&mostrarAte=SUBESP_VAR&opcoesBusca=TODOS_OS_NOMES&loginUsuario=Visitante&senhaUsuario=&contexto=consulta-publica>) 
-
-
-
-O sistema estudado localiza-se "Trilha do vinhático" no Parque Estadual do Rio Doce (PERD) no estado de Minas Gerais (<http://www.ief.mg.gov.br/>). Ao longo da trilha observamos várias manchas de *E. brasiliensis*. Observamos em campo que a arquitetura desta planta favorece o acúmulo da serrapilheira provalmente composta por folhas, galhos, flores e frutos das espécies 
-arbóreas acima das manchas (Figura 1). 
+O sistema estudado localiza-se na "Trilha do vinhático" no Parque Estadual do Rio Doce (PERD) no estado de Minas Gerais (<http://www.ief.mg.gov.br/>). Ao longo da trilha haviam (espero que ainda existam) várias manchas de *E. brasiliensis*. Observamos em campo que a arquitetura desta planta favorece o acúmulo da serrapilheira, provalmente composta por folhas, galhos, flores e frutos das espécies arbóreas acima das manchas (Figura 1).  
 
 ![Figura 1. Indivíduos de *E. brasiliensis* com a serrapilheira acumulada entre as folhas. Foto: K.R. Firmiano](docs/e_brasiliensis.JPG)
 
-### Estrutura populacional
+O  objetivo do estudo foi inventariar a fauna associada à serrapilheira acumulada na copa de *E. brasiliensis*, e adicionalmente elaboramos duas hipóteses muito simples (e talvez, óbvias): 
 
-Amostramos 110 indivíduos de *E. brasiliensis* para determinar a estrutura populacional de *E. brasiliensis*. Com um fita métrica mensuramos: altura total (cm), altura da copa (cm), e contamos o número de folhas, e de hastes florais, quando presente.
+H1: o acúmulo de serrapilheira aumenta com complexidade estrutural de *E. brasiliensis*;
 
-### Coleta da serrapilheira
+H2: a riqueza de invertebrados aumenta com o acúmulo de serrapilheira
 
-A serrapilheira acumulada foi coletada pela técnica de batimento e material ainda remanescente foi removido com pincel. Toda a copa
-da planta foi acondicionada dentro de um saco plástico para evitar perda de 
-serrapilheira e fuga dos invertebrados. 
 
-Em laboratório o material foi 
-peneirado (500 μm) e somente a porção retida nesta peneira foi triada. 
-Os organismos foram separados manualmente, fixados em álcool a 70% e 
-identificados em nível de morfoespécies.
+### Métodos
+
+Amostramos 30 espécimes de *E. brasiliensis* em julho de 2012. Coletamos a serrapilheira acumulada pela técnica de batimento. Durante o batimento, toda a copa da planta foi acondicionada dentro de um saco plástico para evitar perda deserrapilheira e fuga dos invertebrados. O material ainda remanescente foi removido com pincel. 
+
+Em laboratório peneiramos a serrapilheira em peneira de 500 μm e triamos somente a porção retida nesta granulometria. Triamos os organismos manualmente sob lupa (32x) e posteriormente os fixamos em álcool a 70% e 
+identificados em nível de morfoespécie. 
+
+## Análises
+
+Descrever as análises de H1, botar resultados e gráficos 
+
+o mesmo para H2
+
 
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:

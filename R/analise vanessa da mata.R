@@ -7,20 +7,20 @@ summary(eb2)
 plot(eb2)
 biomassa=glm(biomassa~folhas*altura)
 anova(biomassa,test="Chisq")
-# número de folhas e altura determinam a biomassa
+# n?mero de folhas e altura determinam a biomassa
 
 
 m.biomassa=glm(biomassa~folhas+altura)
 anova(m.biomassa,test="Chisq")
 summary(m.biomassa)
 plot (biomassa~folhas)
-# fazer os graficos de biomassa em função do número de folhas e altura
+# fazer os graficos de biomassa em fun??o do n?mero de folhas e altura
 
 biomassa3=glm(biomassa~folhas)
 anova(biomassa3,test="Chisq")
 summary(biomassa3)
 
-plot(biomassa~folhas,pch=16,bty="l",ylim=c(0,120),xlab="Número de folhas",ylab="Biomassa de serapilheira (g)")
+plot(biomassa~folhas,pch=16,bty="l",ylim=c(0,120),xlab="N?mero de folhas",ylab="Biomassa de serapilheira (g)")
 curve(0.34949+0.76385*x,add=T,col="red")
 
 
@@ -31,7 +31,7 @@ plot(biomassa~altura,pch=16,bty="l",ylim=c(0,120),xlab="Altura (cm) ",ylab="Biom
 curve(-21.34546+0.59252*x,add=T,col="red")
 
 
-analise de riqueza
+#analise de riqueza
 
 
 eb2<-read.table("eb2.txt", h=T)
