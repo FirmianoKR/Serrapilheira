@@ -38,21 +38,45 @@ identificados em nível de morfoespécie.
 
 ### *Indivíduos mais altos, possuem mais folhas, logo acumulam maior biomassa de serrapilheira (H1)*
 
-O acúmulo de serrapilheira (gramas) foi positivamente influenciado pela altura e pelo número de folha dos indivíduos (**fig**). Ou seja, a complexidade estrutural da planta funciona como um eficiente depósito de matéria orgânica. Neste trabalho nós não mensuramos a taxa de acúmulo ou mesmo a de decomposição da serrapilheira ao longo do tempo. Fica a dica caso você queira reproduzir este estudo em seu sistema de estudos. ;-)
+O acúmulo de serrapilheira (gramas) foi positivamente influenciado pela altura e pelo número de folha dos indivíduos (Figura 2). Ou seja, a complexidade estrutural da planta funciona como um eficiente depósito de matéria orgânica. Neste trabalho nós não mensuramos a taxa de acúmulo ou mesmo a de decomposição da serrapilheira ao longo do tempo. Fica a dica caso você queira reproduzir este estudo em seu sistema de estudos. ;-) **ver como escrever a estatística dos glms**
 
-```{r}
+```{r include=FALSE}
 serrap <- read.csv("./data/serrapilheira.csv")
 
-serrap$biomassa_serrapilheira_g <- glm(serrap$biomassa_serrapilheira_g ~ serrap$num_folhas*serrap$altura_total_cm)
+biomassa <- serrap$biomassa_serrapilheira_g
+folhas <- serrap$num_folhas
+altura <- serrap$altura_total_cm
 
-anova(serrap$biomassa_serrapilheira_g,test = "Chisq")
+mod_h1 <- glm(biomassa ~ folhas * altura)
 
-# criar a figura
+anova(mod_h1,test = "Chisq")
+
+# plots
+par(mfrow = c(1, 2), mar = c(5, 5, 4, 1))
+plot(
+  biomassa ~ folhas,
+  pch = 16,
+  las = 1,
+  xlab = "Número de folhas",
+  ylab = "Serrapilheira acumulada (g)"
+)
+abline(mod_h1, lty = 2, col = "red")
+
+plot(
+  biomassa ~ altura,
+  pch = 16,
+  las = 1,
+  xlab = "Altura (cm)",
+  ylab = "Serrapilheira acumulada (g)"
+)
+abline(mod_h1, lty = 2, col = "red")
+dev.off()
 ```
+![Figura 2. Relações entre o número de folhas (painel esquerdo), altura dos indivíduos (painel direito) a serrapilheira acumulada.](figs/fig2.png)
 
 ### *E quanto maior o acúmulo de serrapilheira, maior a riqueza de invertebrados (H2)*
 
-uma breve descrição (**fig2**)
+uma breve descrição (**fig3**)
 ```{r}
 # calc a riqueza
 # construir o modelo

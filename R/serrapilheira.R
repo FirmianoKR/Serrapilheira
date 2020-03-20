@@ -1,11 +1,36 @@
 ## fauna associada à serripilheria acumulada em E. brasiliensis
 
-# lendo os dados
 serrap <- read.csv("./data/serrapilheira.csv")
 
-# H1
-# biomassa=glm(biomassa~folhas*altura)
-serrap$biomassa_serrapilheira_g = glm(serrap$biomassa_serrapilheira_g ~ serrap$num_folhas*serrap$altura_total_cm)
-anova(serrap$biomassa_serrapilheira_g,test="Chisq")
+biomassa <- serrap$biomassa_serrapilheira_g
+folhas <- serrap$num_folhas
+altura <- serrap$altura_total_cm
 
-# aqui, plotar as 2 paradas
+# mod1
+mod_1 <- glm(biomassa ~ folhas)
+anova(mod_1,test = "Chisq")
+# mod2
+mod_2 <- glm(biomassa ~ altura)
+anova(mod_2,test = "Chisq")
+
+# plot1
+par(mfrow = c(1, 2), mar = c(5, 5, 4, 1))
+plot(
+  biomassa ~ folhas,
+  pch = 16,
+  las = 1,
+  xlab = "Número de folhas",
+  ylab = "Serrapilheira acumulada (g)"
+)
+abline(mod_1, lty = 2, col = "red")
+
+# plot2
+plot(
+  biomassa ~ altura,
+  pch = 16,
+  las = 1,
+  xlab = "Altura (cm)",
+  ylab = "Serrapilheira acumulada (g)"
+)
+abline(mod_2, lty = 2, col = "red")
+dev.off()
