@@ -29,33 +29,34 @@ H1: o acúmulo de serrapilheira aumenta com complexidade estrutural de *E. brasi
 H2: a riqueza de invertebrados aumenta com o acúmulo de serrapilheira
 
 
-### Métodos
+### Mão na massa! (ou melhor, na serrapilheira!)
 
 Amostramos 30 espécimes de *E. brasiliensis* em julho de 2012. Coletamos a serrapilheira acumulada pela técnica de batimento. Durante o batimento, toda a copa da planta foi acondicionada dentro de um saco plástico para evitar perda deserrapilheira e fuga dos invertebrados. O material ainda remanescente foi removido com pincel. 
 
 Em laboratório peneiramos a serrapilheira em peneira de 500 μm e triamos somente a porção retida nesta granulometria. Triamos os organismos manualmente sob lupa (32x) e posteriormente os fixamos em álcool a 70% e 
 identificados em nível de morfoespécie. 
 
-## Análises
+### *Indivíduos mais altos, possuem mais folhas, logo acumulam maior biomassa de serrapilheira (H1)*
 
-Descrever as análises de H1, botar resultados e gráficos 
+O acúmulo de serrapilheira (gramas) foi positivamente influenciado pela altura e pelo número de folha dos indivíduos (**fig**). Ou seja, a complexidade estrutural da planta funciona como um eficiente depósito de matéria orgânica. Neste trabalho nós não mensuramos a taxa de acúmulo ou mesmo a de decomposição da serrapilheira ao longo do tempo. Fica a dica caso você queira reproduzir este estudo em seu sistema de estudos. ;-)
 
-o mesmo para H2
+```{r}
+serrap <- read.csv("./data/serrapilheira.csv")
 
+serrap$biomassa_serrapilheira_g <- glm(serrap$biomassa_serrapilheira_g ~ serrap$num_folhas*serrap$altura_total_cm)
 
+anova(serrap$biomassa_serrapilheira_g,test = "Chisq")
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+# criar a figura
 ```
 
-## Including Plots
+### *E quanto maior o acúmulo de serrapilheira, maior a riqueza de invertebrados (H2)*
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+uma breve descrição (**fig2**)
+```{r}
+# calc a riqueza
+# construir o modelo
+# criar figura
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### Bibliografia
