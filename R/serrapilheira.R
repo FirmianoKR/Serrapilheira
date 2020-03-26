@@ -11,6 +11,7 @@ riqueza <- serrap$riqueza
 # mod1
 mod_1 <- glm(biomassa ~ folhas)
 anova(mod_1,test = "Chisq")
+
 # mod2
 mod_2 <- glm(biomassa ~ altura)
 anova(mod_2,test = "Chisq")
