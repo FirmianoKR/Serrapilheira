@@ -5,7 +5,9 @@ serrap <- read.csv("./data/serrapilheira.csv")
 biomassa <- serrap$biomassa_serrapilheira_g
 folhas <- serrap$num_folhas
 altura <- serrap$altura_total_cm
+riqueza <- serrap$riqueza
 
+# H1: o acúmulo de serrapilheira aumenta com complexidade estrutural de *E. brasiliensis* ####
 # mod1
 mod_1 <- glm(biomassa ~ folhas)
 anova(mod_1,test = "Chisq")
@@ -34,3 +36,18 @@ plot(
 )
 abline(mod_2, lty = 2, col = "red")
 dev.off()
+
+# H2: a riqueza de invertebrados aumenta com o acúmulo de serrapilheira ####
+mod_3 = glm(riqueza ~ biomassa, family = quasipoisson)
+anova(mod_3,test = "Chisq")
+
+# plot 3
+plot(
+  riqueza ~ biomassa,
+  pch = 16,
+  las = 1,
+  xlab = "Serrapilheira acumulada (g)",
+  ylab = "Riqueza de invertebrados"
+)
+curve(exp(2.147680 + 0.007803 * x), add = T, col = "red")
+#####
