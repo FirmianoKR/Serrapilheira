@@ -46,6 +46,7 @@ serrap <- read.csv("./data/serrapilheira.csv")
 biomassa <- serrap$biomassa_serrapilheira_g
 folhas <- serrap$num_folhas
 altura <- serrap$altura_total_cm
+riqueza <- serrap$riqueza
 
 mod_h1 <- glm(biomassa ~ folhas * altura)
 
@@ -76,11 +77,24 @@ dev.off()
 
 ### *E quanto maior o acúmulo de serrapilheira, maior a riqueza de invertebrados (H2)*
 
-uma breve descrição (**fig3**)
-```{r}
-# calc a riqueza
-# construir o modelo
-# criar figura
+A riqueza de invertebrados aumentou com o acúmulo de serrapilheira depositado entre as folhas de *E. brasiliensis* (Figura 3). Este resultado corrobora a importância da serrapilheira como um recurso para os invertebrados que ali vivem. Ali, muitos detrítivoros, como os colêmbolos encontram alimento. Outros táxons podem utilizar a serrapilheira como abrigo, seja da luz (fotofobia) ou mesmo de outro predadores, como as aranhas. 
+
+![Figura 3. Relação entre a quantidade de serrapilheira acumulada, e a riqueza de invertebrados associados.](figs/fig3.png)
+```{r include=FALSE}
+mod_3 = glm(riqueza ~ biomassa, family = quasipoisson)
+anova(mod_3,test = "Chisq")
+
+# plot 3
+plot(
+  riqueza ~ biomassa,
+  pch = 16,
+  las = 1,
+  xlab = "Serrapilheira acumulada (g)",
+  ylab = "Riqueza de invertebrados"
+)
+curve(exp(2.147680 + 0.007803 * x), add = T, col = "red")
 ```
 
-### Bibliografia
+Bem, nosso trabalho terminou por aqui. Vimos com este estudo que o material que cai imediatmente das árvores acima das manchas de *E. brasiliensis* são retidos entre suas folhas devido à sua arquitetura vegetal. Plantas mais altas e com maior número de folhas são capazes de acumular maior quantidade de serrapilheira. E quanto maior a quantidade de serrapilheira acumulada, maior é a riqueza de invertebrados associados. 
+
+Note entretanto, que há uma série outras questões que podem ser exploradas daqui em diante neste mesmo super top sistema ecológico. Assim, próximos estudos podem: i) compararar a fauna associada à serripilheira de *E. brasiliensis*, com aquela presente na do solo adjacente (spoiler!); ii) avaliar as guiltas tróficas; iii) a composição e qualidade nutricional da serrilheira; iv) avaliar a partição de diversidade; e por aí vai. Ou seja, o céu é o limite! 
